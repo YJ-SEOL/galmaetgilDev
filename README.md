@@ -2,6 +2,8 @@
 
 # 공공API를 활용한 갈맷길코스 정보 제공 서비스 
 
+<img width="1435" alt="스크린샷 2022-12-22 오후 3 58 04" src="https://user-images.githubusercontent.com/99378739/209075961-4d61ce83-c28b-4fca-8c1a-48ef3bb627ad.png">
+
 
 
 ## :gem: 개요 :gem:
