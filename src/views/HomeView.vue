@@ -1,34 +1,28 @@
 <template>
-  <div id="page-top">
-    <!-- Navigation-->
-    <!--    bootstrap : m(margin), l(left), r(right), t(top), b(bottom) -1,2,3,4,5 -->
-    <a class="menu-toggle">
-    </a>
+	<div id="page-top">
+		<!-- Navigation-->
+		<!--    bootstrap : m(margin), l(left), r(right), t(top), b(bottom) -1,2,3,4,5 -->
+		<a class="menu-toggle"> </a>
 
+		<!-- HeaderCom -->
+		<Course1 />
+		<MainMap />
+		<!-- 플로깅 -->
+		<Plogging />
 
-    <!-- HeaderCom -->
-    <MainMap/>
+		<!--  갤러리  -->
+		<GalluryCom />
+		<div class="container mt-5">
+			<router-link to="/gallury" class="popup__title" id="main__add">
+				<button class="popup__button">더 보러가기</button>
+			</router-link>
+		</div>
+		<!-- Login  -->
+		<Login />
 
-    <!-- 플로깅 -->
-    <Plogging/>
-
-    <!--  갤러리  -->
-    <GalluryCom/>
-    <div class="container mt-5">
-      <router-link to="/gallury" class="popup__title" id="main__add">
-        <button class="popup__button">
-          더 보러가기
-        </button>
-      </router-link>
-    </div>
-    <!-- Login  -->
-    <Login/>
-
-    <!-- Register  -->
-    <Register/>
-
-
-  </div>
+		<!-- Register  -->
+		<Register />
+	</div>
 </template>
 
 <script>
@@ -39,31 +33,31 @@ import GalluryCom from "@/components/home/GalluryCom";
 import MainMap from "@/components/home/MainMap";
 import Login from "@/components/home/LoginMD";
 import Register from "@/components/home/RegisterMD";
+import Course1 from "./course/Course1.vue";
 
 export default {
-  name: 'HomeView',
-  components: {
-    MainMap,
-    Plogging,
-    GalluryCom,
-    HeaderCom,
-    Login,
-    Register
-  },
-
-}
+	name: "HomeView",
+	components: {
+		MainMap,
+		Plogging,
+		GalluryCom,
+		HeaderCom,
+		Login,
+		Register,
+		Course1,
+	},
+};
 </script>
 
 <style scoped>
-@import "@/assets/css/mypage.css";
+@import "../assets/css/mypage.css";
 @import "../assets/css/popup.css";
 
 @import "../assets/css/elements.css";
 
 #main__add {
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
 }
-
 </style>
