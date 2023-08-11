@@ -403,6 +403,14 @@ export default {
 			fir_cour: 0,
 		};
 	},
+	created() {
+		this.retrieveCourse();
+	},
+	// 최초 화면이 로딩될때(뜰때) 실행되는 이벤트
+	mounted() {
+		// 전체 목록 가져오기 메소드 호출
+		// this.retrieveCourse();
+	},
 	computed: {
 		start_addr_c_1() {
 			return (
@@ -446,18 +454,13 @@ export default {
 			CourseDataService.getAll(this.page, this.pageSize)
 				.then((response) => {
 					this.items = response.data;
+					console.log(`items=${JSON.stringify(this.items)}`);
 				})
 				// 실패하면 에러 출력
 				.catch((e) => {
 					console.log(e);
 				});
 		},
-	},
-
-	// 최초 화면이 로딩될때(뜰때) 실행되는 이벤트
-	mounted() {
-		// 전체 목록 가져오기 메소드 호출
-		this.retrieveCourse();
 	},
 };
 </script>

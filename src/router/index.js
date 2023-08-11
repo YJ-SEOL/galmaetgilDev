@@ -1,134 +1,143 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 // router : 메뉴달기 비교) springboot : controller (메뉴달기)
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
-    // home
-    {
-        path: '/',
-        alias: "/home",
-        name: 'home',
-        component: () => import('@/views/HomeView')
-    },
-    // course
-    {
-        path: '/galinfo',
-        name: 'galinfo',
-        component: () => import('@/views/course/GalInfo')
-    },
-    {
-        path: '/course1',
-        name: 'course1',
-        component: () => import('@/views/course/Course1')
-    },
-    {
-        path: '/course2',
-        name: 'course2',
-        component: () => import('@/views/course/Course2')
-    },
-    {
-        path: '/course3',
-        name: 'course3',
-        component: () => import('@/views/course/Course3')
-    },
-    {
-        path: '/course4',
-        name: 'course4',
-        component: () => import('@/views/course/Course4')
-    },
-    {
-        path: '/course5',
-        name: 'course5',
-        component: () => import('@/views/course/Course5')
-    },
-    {
-        path: '/course6',
-        name: 'course6',
-        component: () => import('@/views/course/Course6')
-    },
-    {
-        path: '/course7',
-        name: 'course7',
-        component: () => import('@/views/course/Course7')
-    },
-    {
-        path: '/course8',
-        name: 'course8',
-        component: () => import('@/views/course/Course8')
-    },
-    {
-        path: '/course9',
-        name: 'course9',
-        component: () => import('@/views/course/Course9')
-    },
-    // 플로깅
-    {
-        path: "/plogging",
-        name: 'plogging',
-        component: () => import('@/views/plogging/Plogging')
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: () => import('@/components/home/Login')
-    },
-    // 마이페이지
-    {
-        path: '/mypage',
-        name: 'mypage',
-        component: () => import('@/views/MyPage')
-    },
-    // 프로필 플로깅
-    {
-        path: '/myplogging',
-        name: 'myplogging',
-        component: () => import('@/views/MyPlogging')
-    },
-    // 프로필 갤러
-    {
-        path: '/mygallury',
-        name: 'mygallury',
-        component: () => import('@/views/MyGallury')
-    },
+	// home
+	{
+		path: "/",
+		alias: "/home",
+		name: "home",
+		component: () => import("@/views/HomeView"),
+	},
+	// course
+	{
+		path: "/galinfo",
+		name: "galinfo",
+		component: () => import("@/views/course/GalInfo"),
+	},
+	{
+		path: "/course1",
+		name: "course1",
+		component: () => import("@/views/course/Course1"),
+	},
+	{
+		path: "/course2",
+		name: "course2",
+		component: () => import("@/views/course/Course2"),
+	},
+	{
+		path: "/course3",
+		name: "course3",
+		component: () => import("@/views/course/Course3"),
+	},
+	{
+		path: "/course4",
+		name: "course4",
+		component: () => import("@/views/course/Course4"),
+	},
+	{
+		path: "/course5",
+		name: "course5",
+		component: () => import("@/views/course/Course5"),
+	},
+	{
+		path: "/course6",
+		name: "course6",
+		component: () => import("@/views/course/Course6"),
+	},
+	{
+		path: "/course7",
+		name: "course7",
+		component: () => import("@/views/course/Course7"),
+	},
+	{
+		path: "/course8",
+		name: "course8",
+		component: () => import("@/views/course/Course8"),
+	},
+	{
+		path: "/course9",
+		name: "course9",
+		component: () => import("@/views/course/Course9"),
+	},
+	// 플로깅
+	{
+		path: "/plogging",
+		name: "plogging",
+		component: () => import("@/views/plogging/Plogging"),
+	},
+	{
+		path: "/login",
+		name: "login",
+		component: () => import("@/components/home/Login"),
+	},
+	// 마이페이지
+	{
+		path: "/mypage",
+		name: "mypage",
+		component: () => import("@/views/MyPage"),
+	},
+	// 프로필 플로깅
+	{
+		path: "/myplogging",
+		name: "myplogging",
+		component: () => import("@/views/MyPlogging"),
+	},
+	// 프로필 갤러
+	{
+		path: "/mygallury",
+		name: "mygallury",
+		component: () => import("@/views/MyGallury"),
+	},
 
-    // 커뮤니티
-    //갤러리
-    {
-        path: '/gallury',
-        name: 'gallury',
-        component: () => import('@/views/gallury')
-    },
-    // 공지사항
-    {
-        path: '/notice',
-        name: 'notice',
-        component: () => import('@/views/notice/NoticeList')
-    },
-    {
-        path: '/add_notice',
-        name: 'add-add_notice',
-        component: () => import('@/views/notice/AddNotice')
-    },
-    {
-        path: '/edit_notice/:id',
-        name: 'edit_notice',
-        component: () => import('@/views/notice/EditNotice')
-    },
-
-]
+	// 커뮤니티
+	//갤러리
+	{
+		path: "/gallury",
+		name: "gallury",
+		component: () => import("@/views/gallury"),
+	},
+	// 공지사항
+	{
+		path: "/notice",
+		name: "notice",
+		component: () => import("@/views/notice/NoticeList"),
+	},
+	{
+		path: "/add_notice",
+		name: "add-add_notice",
+		component: () => import("@/views/notice/AddNotice"),
+	},
+	{
+		path: "/edit_notice/:id",
+		name: "edit_notice",
+		component: () => import("@/views/notice/EditNotice"),
+	},
+];
 
 const router = new VueRouter({
-    mode: 'history',
-    scrollBehavior(){
-        return{ x: 0, y: 0}
-    },
-    base: process.env.BASE_URL,
-    routes
-})
+	mode: "history",
+	scrollBehavior() {
+		return { x: 0, y: 0 };
+	},
+	base: process.env.BASE_URL,
+	routes,
+});
 
+// todo: 230811추가 페이지 이동 전에 실행될 함수
+// todo:(모바일ver 페이지 이동 시 하위 메뉴 열린 채로 이동하는 현상 수정)
+router.beforeEach((to, from, next) => {
+	// 토글된 하위 메뉴 숨기기
+	const menuButton = document.querySelector(".navbar-toggler");
+	if (menuButton && menuButton.getAttribute("aria-expanded") === "true") {
+		menuButton.click();
+	}
+
+	next(); // 다음 페이지로 이동
+});
 
 //추후 게시판 생성시 활성화 예정
 
@@ -160,7 +169,4 @@ const router = new VueRouter({
 // })
 //
 
-
-
-
-export default router
+export default router;

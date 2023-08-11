@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		<!-- 모바일.ver navbarBtn -->
 		<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mainNav">
 			<div class="container-fluid">
 				<a class="navbar-brand ml-0" href="/home">
@@ -22,7 +23,7 @@
 
 			<div class="collapse navbar-collapse" id="navbarToggleExternalContent">
 				<div>
-					<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+					<ul class="navbar-nav text-uppercase ms-auto py-2 py-lg-0">
 						<li class="nav-item">
 							<router-link to="/home" class="nav-link"> Home </router-link>
 						</li>
@@ -39,7 +40,7 @@
 							</a>
 							<div class="dropdown">
 								<div
-									class="dropdown-menu"
+									class="dropdown-menu fade"
 									aria-labelledby="navbarDropdownMenuLink"
 								>
 									<router-link to="/galinfo" class="dropdown-item">
@@ -220,6 +221,10 @@ export default {
 	components: {
 		FooterCom,
 	},
+	data() {
+		return {};
+	},
+
 	//html에서 변수처럼 호출: 뒤에 () 붙이면 안됨
 	//속도는 computed가 빠름
 	computed: {

@@ -5,7 +5,6 @@
 		<a class="menu-toggle"> </a>
 
 		<!-- HeaderCom -->
-		<Course1 />
 		<MainMap />
 		<!-- 플로깅 -->
 		<Plogging />
@@ -33,7 +32,6 @@ import GalluryCom from "@/components/home/GalluryCom";
 import MainMap from "@/components/home/MainMap";
 import Login from "@/components/home/LoginMD";
 import Register from "@/components/home/RegisterMD";
-import Course1 from "./course/Course1.vue";
 
 export default {
 	name: "HomeView",
@@ -44,7 +42,6 @@ export default {
 		HeaderCom,
 		Login,
 		Register,
-		Course1,
 	},
 };
 </script>
